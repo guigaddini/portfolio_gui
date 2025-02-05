@@ -1,0 +1,12 @@
+//O código da animação para o movimento de texto (ping-pong).
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100vw - 100%)); }
+}
+
+.vaievem {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    animation: marquee 3s ease-in-out infinite alternate;
+}

@@ -1,0 +1,13 @@
+//Mixins para flexbox e centralização, que podem ser reutilizados.
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// Mixin de centralização de texto
+@mixin center-text {
+    text-align: center;
+    justify-content: center;
+}

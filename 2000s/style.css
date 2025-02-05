@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw - 100%));
+  }
+}
+.vaievem {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  animation: marquee 3s ease-in-out infinite alternate;
+}
+
 body {
   font-family: "Times New Roman", Times, serif;
   background-color: black;
@@ -12,6 +27,19 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container-idiomas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px auto;
+  grid-column: 2;
+}
+
+.container-vaievem {
+  width: 50%;
 }
 
 header {
@@ -47,15 +75,6 @@ header {
   margin: 0 auto;
 }
 
-.container-idiomas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 20px auto;
-  grid-column: 2;
-}
-
 .idiomas {
   margin: 0 10px;
 }
@@ -74,24 +93,4 @@ h1 {
 
 pre {
   font-family: "Courier New", Courier, monospace;
-}
-
-.container-vaievem {
-  width: 50%;
-}
-
-.vaievem {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  animation: marquee 3s ease-in-out infinite alternate;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(100vw - 100%));
-  }
 }/*# sourceMappingURL=style.css.map */

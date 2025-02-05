@@ -1,10 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import 'reset';
+@import 'mixins';
+@import 'animation';
 
-body{
+body {
     font-family: "Times New Roman", Times, serif;
     background-color: black;
     background-image: url("./img/bg.gif");
@@ -14,18 +12,25 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.container-idiomas {
+    @include flex-center(row);
+    margin: 20px auto;
+    grid-column: 2;
+}
+
+.container-vaievem {
+    width: 50%;
+}
+
+//Cabeçalho
 header {
-    grid-column: 2; 
-    text-align: center;
-    justify-content: center;
+    grid-column: 2;
+    @include center-text;
     padding: 20px;
 }
 
 .titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    @include flex-center(row);
     width: 80%;
     margin: 0 auto;
 }
@@ -39,21 +44,9 @@ header {
 }
 
 .subtitulo {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
+    @include flex-center(column);
     width: 100%;
     margin: 0 auto;
-}
-
-.container-idiomas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 20px auto;
-    grid-column: 2;
 }
 
 .idiomas {
@@ -64,6 +57,7 @@ img {
     margin-bottom: 10px;
 }
 
+//Fontes
 h1, h2, h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -74,22 +68,4 @@ h1 {
 
 pre {
     font-family: "Courier New", Courier, monospace;
-}
-
-//Texto ping-pong
-.container-vaievem {
-width: 50%;
-
-}
-
-.vaievem {
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    animation: marquee 3s ease-in-out infinite alternate;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(100vw - 100%)); }
 }
