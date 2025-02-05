@@ -1,0 +1,7 @@
+:root {
+    --cursor-default: url(http://www.rw-designer.com/cursor-extern.php?id=22253) 8 8, auto;
+}
+
+html, * {
+    cursor: var(--cursor-default);
+}

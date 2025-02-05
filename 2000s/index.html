@@ -18,7 +18,7 @@
             <img src="./img/rainbowspiral.gif" alt="Rainbow Spiral"/>
             <br>
             <div class="cointainer-vaievem">
-                <p class="vaievem">Sejam bem-vindes!</p>
+                <p class="vaievem">OLÁ INTERNAUTA! Seja bem-vinde ao meu webespaço!</p>
             </div>
         </div>
     </header>
@@ -29,5 +29,30 @@
         <img class="idiomas" src="./img/spanish.gif" alt="Español"/>
         <img class="idiomas" src="./img/english.gif" alt="Inglês"/>
     </div>
+
+    <footer>
+        <img class="footer-bar" src="./img/rainbowbar.gif" alt="Rainbow Bar" />
+        <div class="footer-texto">
+            <p><b>Contato:</b></p>
+            <a href="mailto:guilhermegaddini@duck.com" target="_blank" rel="noopener noreferrer">
+                <p>guilhermegaddini@duck.com</p>
+            </a>
+            <p> | </p>
+            <a href="https://wa.me/5511978770255" target="_blank" rel="noopener noreferrer">
+                <img src="./img/icq.gif" alt="WhatsApp"/>
+            </a>
+            <a href="https://wa.me/5511978770255" target="_blank" rel="noopener noreferrer">
+                <p> (11) 978 770 255</p>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('footer a').forEach(link => {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
+
 </body>
 </html>

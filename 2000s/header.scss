@@ -1,0 +1,26 @@
+//Cabeçalho
+header {
+    grid-column: 2;
+    @include center-text;
+    padding: 20px;
+}
+
+.titulo {
+    @include flex-center(row);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.titulo img {
+    margin: 5px;
+}
+
+.titulo h1 {
+    margin: 0 20px;
+}
+
+.subtitulo {
+    @include flex-center(column);
+    width: 100%;
+    margin: 0 auto;
+}

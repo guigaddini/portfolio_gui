@@ -1,6 +1,10 @@
 @import 'reset';
 @import 'mixins';
 @import 'animation';
+@import 'cursor';
+@import 'header';
+@import 'footer';
+
 
 body {
     font-family: "Times New Roman", Times, serif;
@@ -22,33 +26,6 @@ body {
     width: 50%;
 }
 
-//Cabeçalho
-header {
-    grid-column: 2;
-    @include center-text;
-    padding: 20px;
-}
-
-.titulo {
-    @include flex-center(row);
-    width: 80%;
-    margin: 0 auto;
-}
-
-.titulo img {
-    margin: 5px;
-}
-
-.titulo h1 {
-    margin: 0 20px;
-}
-
-.subtitulo {
-    @include flex-center(column);
-    width: 100%;
-    margin: 0 auto;
-}
-
 .idiomas {
     margin: 0 10px;
 }
@@ -60,12 +37,12 @@ img {
 //Fontes
 h1, h2, h3 {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0.5em 0;
 }
 
 h1 {
-    font-size: 1.6vh;
+    font-size: clamp(1rem, 1.6vh + 0.5rem, 1.8rem);
 }
-
 pre {
     font-family: "Courier New", Courier, monospace;
 }

@@ -16,30 +16,15 @@
   display: inline-block;
   position: absolute;
   left: 0;
-  animation: marquee 3s ease-in-out infinite alternate;
+  animation: marquee 9s ease-in-out infinite alternate;
 }
 
-body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: black;
-  background-image: url("./img/bg.gif");
-  color: white;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+:root {
+  --cursor-default: url(http://www.rw-designer.com/cursor-extern.php?id=22253) 8 8, auto;
 }
 
-.container-idiomas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 20px auto;
-  grid-column: 2;
-}
-
-.container-vaievem {
-  width: 50%;
+html, * {
+  cursor: var(--cursor-default);
 }
 
 header {
@@ -75,6 +60,67 @@ header {
   margin: 0 auto;
 }
 
+footer {
+  grid-column: 2;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 33.3333333333%;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-bar {
+  width: auto;
+  min-width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+footer a {
+  color: white;
+}
+
+.footer-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.footer-texto > * {
+  display: inline-block;
+  flex-shrink: 0;
+  width: auto;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: black;
+  background-image: url("./img/bg.gif");
+  color: white;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container-idiomas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px auto;
+  grid-column: 2;
+}
+
+.container-vaievem {
+  width: 50%;
+}
+
 .idiomas {
   margin: 0 10px;
 }
@@ -85,10 +131,11 @@ img {
 
 h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0.5em 0;
 }
 
 h1 {
-  font-size: 1.6vh;
+  font-size: clamp(1rem, 1.6vh + 0.5rem, 1.8rem);
 }
 
 pre {
