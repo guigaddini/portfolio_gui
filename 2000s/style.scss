@@ -15,7 +15,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
 }
 
 .container-idiomas {
@@ -23,7 +23,6 @@ body {
     margin: 20px auto;
     grid-column: 2;
     grid-row: 2;
-    z-index: 2; 
 }
 
 .container-vaievem {
@@ -36,7 +35,7 @@ body {
 
 .content {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
     justify-self: start;
     align-self: center;
     margin-left: 20px;
@@ -54,9 +53,14 @@ body {
 }
 
 .pixel-art {
-    width: 250px;
+    width: 150px;
     max-width: 100%;
     height: auto;
     display: block;
     margin-top: 40px;
+    // borda img:
+    filter: drop-shadow(2px 2px 0px rgb(70, 67, 67)) 
+    drop-shadow(-2px -2px 0px rgb(70, 67, 67))
+    drop-shadow(2px -2px 0px rgb(70, 67, 67))
+    drop-shadow(-2px 2px 0px rgb(70, 67, 67));
 }
