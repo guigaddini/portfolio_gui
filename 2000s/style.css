@@ -98,37 +98,6 @@ footer a {
   width: auto;
 }
 
-body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: black;
-  background-image: url("./img/bg.gif");
-  color: white;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.container-idiomas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 20px auto;
-  grid-column: 2;
-}
-
-.container-vaievem {
-  width: 50%;
-}
-
-.idiomas {
-  margin: 0 10px;
-}
-
-img {
-  margin-bottom: 10px;
-}
-
 h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0.5em 0;
@@ -140,4 +109,61 @@ h1 {
 
 pre {
   font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: black;
+  background-image: url("./img/bg.gif");
+  color: white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container-idiomas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px auto;
+  grid-column: 2;
+  grid-row: 2;
+  z-index: 2;
+}
+
+.container-vaievem {
+  width: 50%;
+}
+
+.idiomas {
+  margin: 0 10px;
+}
+
+.content {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  align-self: center;
+  margin-left: 20px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.pixel-art {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 40px;
 }/*# sourceMappingURL=style.css.map */
